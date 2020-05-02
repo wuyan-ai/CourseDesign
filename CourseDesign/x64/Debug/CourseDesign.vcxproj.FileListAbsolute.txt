@@ -1,0 +1,2 @@
+C:\Users\Administrator\Desktop\CPCC\CourseDesign\x64\Debug\CourseDesign.exe
+C:\Users\Administrator\Desktop\CPCC\CourseDesign\x64\Debug\CourseDesign.pdb
