@@ -44,14 +44,16 @@ public class Main {
                      System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
            }
            else{
-               System.out.println(wordAnalysis.line);
-               System.out.println(wordAnalysis.msg);
+               System.out.println("存在ERROR");
+               if(wordAnalysis.tokenList!=null)
+                   for(WordToken wordToken:wordAnalysis.tokenList)
+                       System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
            }
 //        wordAnalysis.tokenList=null;
 //        WordAnalysis.tokenList=null;
 
 
        // System.out.println(readString2().length());
-        System.out.println("Hello World!");
+
     }
 }

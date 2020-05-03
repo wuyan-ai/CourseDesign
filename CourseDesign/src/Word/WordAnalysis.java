@@ -19,6 +19,7 @@ public class WordAnalysis {
     public boolean  Scanner(String filePath)
     {
         char ch ;
+        int success=1;
         String tmpStr = "";
         WordToken wordToken=new WordToken();
         StringBuffer str=new StringBuffer("");
@@ -54,7 +55,8 @@ public class WordAnalysis {
                                                            else  if (ch == '(')  flag=15;
                                                              else  if (ch == ')')  flag=16;
                                                                 else  if (ch == ' ' || ch == '\n' || ch == '\r' || ch == '\t') flag=17;
-                                                                     else  flag=18;
+                                                                   else if(ch=='\'')  flag=18;
+                                                                     else  flag=19;
                 }
                 else
                 {
@@ -77,12 +79,14 @@ public class WordAnalysis {
                                     //关键字
                                     wordToken = new WordToken(line,tmpStr.toUpperCase(),"保留字，无语义信息");
                                     tokenList.add(wordToken);
+                                    tmpStr="";
                                 }
                                 else
                                 {
                                     //不是关键字,是标示符
                                     wordToken = new WordToken(line,"ID",tmpStr);
                                     tokenList.add(wordToken);
+                                    tmpStr="";
                                 }
                                 break;
                             }
@@ -155,7 +159,10 @@ public class WordAnalysis {
                         }
                         else {
                             msg="错误:“:”不是合法的符号";
-                            return false;
+                            success=0;
+                            wordToken = new WordToken(line,"ERROR",msg);
+                            tokenList.add(wordToken);
+                            break;
                         }
                         break;
                     case 10://','
@@ -188,9 +195,42 @@ public class WordAnalysis {
                         break;
                     case 17: //空白符
                         break;
+                    case 18:
+                        if((chNum = fr.read())!=-1 ){
+                            tmpStr+=(char)chNum;
+                            if((chNum = fr.read())!=-1 ){
+                                ch=(char)chNum;
+                                if(ch=='\'') {
+                                    wordToken = new WordToken(line,"CHARC",tmpStr);
+                                    tokenList.add(wordToken);
+                                }
+                                else{
+                                    msg="字符'不符合词法规则";
+                                    wordToken = new WordToken(line,"ERROR",msg);
+                                    tokenList.add(wordToken);
+                                    return false;
+                                }
+                            }
+                            else{
+                                msg="字符'不符合词法规则";
+                                wordToken = new WordToken(line,"ERROR",msg);
+                                tokenList.add(wordToken);
+                                return false;
+                            }
+                        }
+                        else{
+                           msg="字符'不符合词法规则";
+                            wordToken = new WordToken(line,"ERROR",msg+"");
+                            tokenList.add(wordToken);
+                           return false;
+                        }
+                        break;
                         default:
                             msg="包含错误字符";//打印错误信息
-                            return false;
+                            success=0;
+                            wordToken = new WordToken(line,"ERROR",msg+ch);
+                            tokenList.add(wordToken);
+                            break;
                 }
             }
             fr.close();
@@ -200,6 +240,8 @@ public class WordAnalysis {
             msg="File reader出错";
             return false;
         }
+        if(success == 0)
+          return false;
         return true;
     }
 
