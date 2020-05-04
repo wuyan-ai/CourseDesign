@@ -77,7 +77,7 @@ public class WordAnalysis {
                                 if (IsKeyWord(tmpStr))
                                 {
                                     //关键字
-                                    wordToken = new WordToken(line,tmpStr.toUpperCase(),"保留字，无语义信息");
+                                    wordToken = new WordToken(line,tmpStr.toUpperCase(),"reserved word");
                                     tokenList.add(wordToken);
                                     tmpStr="";
                                 }
@@ -95,7 +95,7 @@ public class WordAnalysis {
                             if (IsKeyWord(tmpStr))
                             {
                                 //关键字
-                                wordToken = new WordToken(line,tmpStr.toUpperCase(),"保留字，无语义信息");
+                                wordToken = new WordToken(line,tmpStr.toUpperCase(),"reserved word");
                                 tokenList.add(wordToken);
                             }
                             else
@@ -166,12 +166,26 @@ public class WordAnalysis {
                         }
                         break;
                     case 10://','
-                        wordToken = new WordToken(line,",","分界符，无语义信息");
+                        wordToken = new WordToken(line,"COMMA","分界符，无语义信息");
                         tokenList.add(wordToken);
                         break;
                     case 11://'.'
-                        wordToken = new WordToken(line,".","分界符，无语义信息");
-                        tokenList.add(wordToken);
+                        if((chNum = fr.read())!=-1 && ((char)chNum=='.'))
+                        {
+                            wordToken = new WordToken(line,"..","分界符，无语义信息");
+                            tokenList.add(wordToken);
+                        }
+                        else if((chNum = fr.read())==-1)
+                        {
+                            wordToken = new WordToken(line,".","结束符，无语义信息");
+                            tokenList.add(wordToken);
+                        }
+                        else
+                        {
+                            wordToken = new WordToken(line,".","结束符，无语义信息");
+                            tokenList.add(wordToken);
+                            fr.unread(chNum);
+                        }
                         break;
                     case 12: //'='
                         wordToken = new WordToken(line,"=","分界符，无语义信息");
@@ -195,34 +209,23 @@ public class WordAnalysis {
                         break;
                     case 17: //空白符
                         break;
-                    case 18:
-                        if((chNum = fr.read())!=-1 ){
-                            tmpStr+=(char)chNum;
-                            if((chNum = fr.read())!=-1 ){
-                                ch=(char)chNum;
-                                if(ch=='\'') {
-                                    wordToken = new WordToken(line,"CHARC",tmpStr);
-                                    tokenList.add(wordToken);
-                                }
-                                else{
-                                    msg="字符'不符合词法规则";
-                                    wordToken = new WordToken(line,"ERROR",msg);
-                                    tokenList.add(wordToken);
-                                    return false;
-                                }
-                            }
-                            else{
-                                msg="字符'不符合词法规则";
-                                wordToken = new WordToken(line,"ERROR",msg);
-                                tokenList.add(wordToken);
-                                return false;
-                            }
+                    case 18://' ' '  字符处理
+                        while(((chNum = fr.read())!=-1) && !IsOther((char)chNum) ){
+                            ch=(char)chNum;
+                            tmpStr+=ch;
                         }
-                        else{
-                           msg="字符'不符合词法规则";
-                            wordToken = new WordToken(line,"ERROR",msg+"");
+                        ch=(char)chNum;
+                        if(ch=='\'')
+                        {
+                            wordToken = new WordToken(line,"CHARC",tmpStr);
                             tokenList.add(wordToken);
-                           return false;
+                        }
+                        else
+                        {
+                            success=0;
+                            msg="字符‘不合法";
+                            wordToken = new WordToken(line,"ERROR",msg+ch);
+                            tokenList.add(wordToken);
                         }
                         break;
                         default:
