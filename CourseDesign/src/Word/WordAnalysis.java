@@ -248,6 +248,17 @@ public class WordAnalysis {
         return true;
     }
 
+    //保存所有错误信息
+    public  List<WordToken> showErrLines(){
+        List<WordToken> tempList=new ArrayList<>();
+        for(WordToken wordToken:tokenList){
+            if(wordToken.type.equals("ERROR"))
+                tempList.add(wordToken);
+        }
+        if(tempList==null || tempList.size()==0)
+            return null;
+        return tempList;
+    }
 
      /*
      *判断字符是不是其他字符
@@ -282,7 +293,7 @@ public class WordAnalysis {
             return true;
         if (str.equals("end"))
             return true;
-        if (str == "var")
+        if (str.equals("var"))
             return true;
         if (str.equals("procedure"))
             return true;
