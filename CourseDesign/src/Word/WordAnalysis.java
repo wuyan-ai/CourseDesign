@@ -1,17 +1,15 @@
 package Word;
+
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.PushbackReader;
 import java.util.*;
 
-import static sun.nio.ch.IOStatus.EOF;
-
 public class WordAnalysis {
      public String msg=null;  //保存错误信息
      static public int line=1;
      static public List<WordToken> tokenList=new ArrayList<WordToken>();  //保存token序列
-
 
     /*
      *词法分析扫描程序，每次调用返回一个Token指针
@@ -56,6 +54,7 @@ public class WordAnalysis {
                                                              else  if (ch == ')')  flag=16;
                                                                 else  if (ch == ' ' || ch == '\n' || ch == '\r' || ch == '\t') flag=17;
                                                                    else if(ch=='\'')  flag=18;
+                                                                    else if(ch=='{') flag=19;
                                                                      else  flag=19;
                 }
                 else
@@ -160,7 +159,7 @@ public class WordAnalysis {
                         else {
                             msg="错误:“:”不是合法的符号";
                             success=0;
-                            wordToken = new WordToken(line,"ERROR",msg);
+                            wordToken = new WordToken(line,"ERROR","词法分析出错："+msg);
                             tokenList.add(wordToken);
                             break;
                         }
@@ -224,17 +223,31 @@ public class WordAnalysis {
                         {
                             success=0;
                             msg="字符‘不合法";
-                            wordToken = new WordToken(line,"ERROR",msg+ch);
+                            wordToken = new WordToken(line,"ERROR","词法分析出错："+msg+ch);
+                            tokenList.add(wordToken);
+                        }
+                        break;
+                    case 19: //空白符
+                        while(((chNum = fr.read())!=-1) && (char)chNum!='}'){ }
+                        if(chNum==-1)
+                        {
+                            success=0;
+                            msg="无}与{匹配";
+                            wordToken = new WordToken(line,"ERROR","词法分析出错："+msg+ch);
                             tokenList.add(wordToken);
                         }
                         break;
                         default:
-                            msg="包含错误字符";//打印错误信息
+                            msg="遇到错误字符";//打印错误信息
                             success=0;
                             wordToken = new WordToken(line,"ERROR",msg+ch);
                             tokenList.add(wordToken);
                             break;
                 }
+            }
+            if(success==1){
+                wordToken = new WordToken(line,"EOF","结束");
+                tokenList.add(wordToken);
             }
             fr.close();
         } catch (IOException e) {
