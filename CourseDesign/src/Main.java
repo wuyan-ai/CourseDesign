@@ -105,7 +105,7 @@ public class Main extends JFrame {
 
         }
         else{
-            System.out.println("词法分析过程中发现ERROR");
+            System.out.println("词法分析过程中发现ERROR");  //b%@!
             if(wordAnalysis.tokenList!=null)
                 for(WordToken wordToken:wordAnalysis.tokenList)
                     System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
