@@ -16,6 +16,7 @@ public class Main extends JFrame {
         static TreePanel Panel ;
 
 
+        //测试
         public  Main() {
             Panel = new TreePanel() ;
             Panel.setPreferredSize( new Dimension( Width , High ) ) ;
