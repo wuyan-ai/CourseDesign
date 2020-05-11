@@ -122,12 +122,14 @@ public class Parse {
                    /*
                    打印 叶子节点的wordmean
                    */
+                    System.out.println();
+                    System.out.print("匹配 ：");
                     if(cur-1>=0)
                         nowline=TokenList.get( cur-1 ).line;
                     if(nowline==TokenList.get( cur ).line||cur==0)
                         System.out.print(TokenList.get( cur ).wordMean+"  ");
                     else{
-                        System.out.println();
+                      //  System.out.println();
                         System.out.print(TokenList.get( cur ).wordMean+"  ");
                     }
 
@@ -138,6 +140,29 @@ public class Parse {
                 else {
                     treeNode child ;
                     Enum.nonTerminals NonTerminals = Product.product[choose].getProductNonterminal(i) ;
+
+                      /*
+                   打印 非叶子节点的wordmean
+                   */
+                    System.out.println();
+                    System.out.print("规约 ：");
+//                    if(cur-1>=0)
+//                        nowline=TokenList.get( cur-1 ).line;
+//                    if(nowline==TokenList.get( cur ).line||cur==0)
+//                        System.out.print(Product.product[choose].getHead()+" ->"+NonTerminals);
+//                    else{
+                    String t="";
+                    for(j = 0 ; j < Product.product[choose].getproductNum() ; j ++ )
+                    {
+                        if(Product.product[choose].getflag(j)==0)
+                            t=""+Product.product[choose].getProductTerminal(j).toString()+" ";
+                        else
+                            t=t+Product.product[choose].getProductNonterminal(j).toString()+" ";
+                    }
+
+                    System.out.print(Product.product[choose].getHead()+" ->"+t);
+                  //  }
+
                     child = match( NonTerminals , root ) ;   //非终极符递归
                     root.setChild( child ) ;
                 }
