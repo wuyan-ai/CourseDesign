@@ -74,7 +74,7 @@ public class Main extends JFrame {
 
     public static void main(String[] args) {
         WordAnalysis wordAnalysis=new WordAnalysis();
-        String filename= "C:\\Users\\Administrator\\Desktop\\test.txt";
+        String filename= "./code.txt";//黑黑的更改, 使用相对路径增强软件适应性, 也方便和界面的联系, 同时也添加了code.txt文件, 运行结果良好
         if(wordAnalysis.Scanner(filename)) {
             if(wordAnalysis.tokenList!=null)
                 for(WordToken wordToken:wordAnalysis.tokenList)
