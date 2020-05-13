@@ -15,7 +15,6 @@ public class Main extends JFrame {
         static int  Width , High ;
         static TreePanel Panel ;
 
-
         //测试
         public  Main() {
             Panel = new TreePanel() ;
@@ -54,14 +53,13 @@ public class Main extends JFrame {
                     X += Length - width + Space ;
                 }
                 root.setWidth( width ) ;
-
             }
             return width ;
         }
 
         public  static void drawtree( treeNode root ) {
             X = 20 ;
-            High = getTreeInf( root , 20 ) ;
+            High = getTreeInf( root , 20 );
             Width = X ;
             Panel.Root = root ;
 
@@ -93,6 +91,8 @@ public class Main extends JFrame {
             {
                try{
                    Main.drawtree( root ) ;
+                   System.out.println();
+                   System.out.println("成功");
                }catch (Exception e){
                    System.out.println("语法存在ERROR");
                }
@@ -105,12 +105,11 @@ public class Main extends JFrame {
 
         }
         else{
-            System.out.println("词法分析过程中发现ERROR");  //b%@!
+            System.out.println("词法分析过程中发现ERROR");
             if(wordAnalysis.tokenList!=null)
                 for(WordToken wordToken:wordAnalysis.tokenList)
                     System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
         }
     }
 }
-// 这是来自黑黑的本地修改!!!
 

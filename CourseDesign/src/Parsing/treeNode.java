@@ -1,14 +1,14 @@
 package Parsing;
 
 public class treeNode {
-    int childNum ;
-    treeNode[] child = new treeNode[10] ;
-    treeNode father ;
+        int childNum ;
+        treeNode[] child = new treeNode[10] ;
+        treeNode father ;
 
-    int flag ;     // 0 表示叶子节点
-    Enum.nonTerminals NonTerminal ;
-    Enum.lexType Terminal ;
-    String data ;
+        int flag ;     // 0 表示叶子节点
+        Enum.nonTerminals NonTerminal ;
+        Enum.lexType Terminal ;
+        String data ;
 
     int x , y , width , length ;
 

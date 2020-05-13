@@ -137,7 +137,7 @@ public class SNLpredict {
         predict[58].setPredict( Enum.lexType.ID ) ;				predict[58].setPredict( Enum.lexType.IF ) ;
         predict[58].setPredict( Enum.lexType.WHILE ) ;			predict[58].setPredict( Enum.lexType.RETURN ) ;
         predict[58].setPredict( Enum.lexType.READ ) ;			predict[58].setPredict( Enum.lexType.WRITE ) ;
-        predict[58].setPredict( Enum.lexType.END ) ;			predict[58].setPredict( Enum.lexType.SEMI ) ;
+     //   predict[58].setPredict( Enum.lexType.END ) ;			predict[58].setPredict( Enum.lexType.SEMI ) ;
 
         predict[59].setPredict( Enum.lexType.ELSE ) ;			predict[59].setPredict( Enum.lexType.FI ) ;
         predict[59].setPredict( Enum.lexType.END ) ;			predict[59].setPredict( Enum.lexType.ENDWH ) ;
