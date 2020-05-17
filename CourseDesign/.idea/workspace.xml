@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="45b301dc-1733-489b-a54c-554d399fcc04" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parsing/Parse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parsing/Parse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/TreePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Win.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Win.java" afterDir="false" />
-    </list>
+    <list default="true" id="45b301dc-1733-489b-a54c-554d399fcc04" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -51,8 +44,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="311" column="59" selection-start-line="311" selection-start-column="59" selection-end-line="311" selection-end-column="59" />
+            <state relative-caret-position="380">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5286#5287#0" expanded="true" />
@@ -318,7 +311,7 @@
       <workItem from="1589547889758" duration="616000" />
       <workItem from="1589588090559" duration="7473000" />
       <workItem from="1589597720047" duration="3270000" />
-      <workItem from="1589712019109" duration="2894000" />
+      <workItem from="1589712019109" duration="3328000" />
     </task>
     <task id="LOCAL-00001" summary="加入.gitignore文件">
       <created>1588422519172</created>
@@ -425,11 +418,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589460674088</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="完善界面到可以展示的水平, 现存按钮工作正常, 暂时去掉动态展示分析过程的功能">
+      <created>1589716297173</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1589716297173</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135965000" />
+    <option name="totallyTimeSpent" value="136399000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -453,7 +453,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5053619" visible="true" weight="0.24362606" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5053619" weight="0.24362606" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -540,7 +540,8 @@
     <MESSAGE value="更改UI文件夹的位置" />
     <MESSAGE value="更改读文件的路径, 绝对路径-&gt;项目内相对路径.&#10;添加code.txt文件, 用于存储SNL代码." />
     <MESSAGE value="完成用户输入以及词法分析界面的搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成用户输入以及词法分析界面的搭建" />
+    <MESSAGE value="完善界面到可以展示的水平, 现存按钮工作正常, 暂时去掉动态展示分析过程的功能" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善界面到可以展示的水平, 现存按钮工作正常, 暂时去掉动态展示分析过程的功能" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test.txt" />
@@ -745,8 +746,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="311" column="59" selection-start-line="311" selection-start-column="59" selection-end-line="311" selection-end-column="59" />
+        <state relative-caret-position="380">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#5286#5287#0" expanded="true" />
