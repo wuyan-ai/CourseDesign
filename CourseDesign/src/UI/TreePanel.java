@@ -1,3 +1,5 @@
+package UI;
+
 import Parsing.treeNode;
 
 import javax.swing.*;

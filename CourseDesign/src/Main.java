@@ -1,13 +1,11 @@
-import Parsing.Enum;
 import Parsing.Parse;
 import Parsing.treeNode;
+import UI.TreePanel;
 import Word.WordAnalysis;
 import Word.WordToken;
 
 import javax.swing.*;
 import java.awt.*;
-
-import static Parsing.Parse.match;
 
 public class Main extends JFrame {
         static int  X ;
