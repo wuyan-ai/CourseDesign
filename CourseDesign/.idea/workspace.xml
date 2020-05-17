@@ -3,6 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="45b301dc-1733-489b-a54c-554d399fcc04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parsing/Parse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parsing/Parse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TreePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/TreePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Win.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Win.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,8 +38,52 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="114" column="17" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+            <state relative-caret-position="294">
+              <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#getTreeInf#0;class#Main#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="311" column="59" selection-start-line="311" selection-start-column="59" selection-end-line="311" selection-end-column="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#5286#5287#0" expanded="true" />
+                <element signature="e#5358#5359#0" expanded="true" />
+                <element signature="e#7746#7747#0" expanded="true" />
+                <element signature="e#7817#7818#0" expanded="true" />
+                <element signature="method#showFileOpenDialog#0;class#Win#0" />
+                <element signature="method#writeFiletoTextFied#0;class#Win#0" />
+                <element signature="method#copyFile#0;class#Win#0" />
+                <element signature="method#showFileSaveDialog#0;class#Win#0" />
+                <element signature="method#writeTextAreatoFile#0;class#Win#0" />
+                <element signature="method#showThreeStringtoTextArea#0;class#Win#0" />
+                <element signature="method#showOneStringtoTextArea#0;class#Win#0" />
+                <element signature="method#wordAnalysisProcessShowing#0;class#Win#0" />
+                <element signature="e#41843#42214#0" />
+                <element signature="method#IsOther#0;class#Win#0" />
+                <element signature="method#IsKeyWord#0;class#Win#0" />
+                <element signature="method#getTreeInf#0;class#Win#0" />
+                <element signature="method#wordAnalysisResultShowing#0;class#Win#0" />
+                <element signature="method#parsingResultWritingFile#0;class#Win#0" />
+                <element signature="method#clearFile#0;class#Win#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Parsing/Parse.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="22">
+              <caret line="170" column="99" selection-start-line="170" selection-start-column="99" selection-end-line="170" selection-end-column="99" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,22 +91,17 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
+        <entry file="file://$PROJECT_DIR$/src/Word/WordAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+            <state relative-caret-position="38">
+              <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="19" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3045#4182#1" />
+                <element signature="e#4331#4560#1" />
+                <element signature="e#4622#4833#1" />
+                <element signature="e#5018#5527#1" />
               </folding>
             </state>
           </provider>
@@ -66,11 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/TreePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="57">
+              <caret line="3" column="5" selection-end-line="41" />
             </state>
           </provider>
         </entry>
@@ -93,6 +134,17 @@
       <find>ERROR</find>
       <find>保留字</find>
       <find>draw</find>
+      <find>wordAnalysisResultHeadlineTextArea</find>
+      <find>analysisProcessTextAreaScrollPanel</find>
+      <find>showFileOpenDialog</find>
+      <find>code</find>
+      <find>code.</find>
+      <find>code.txt</find>
+      <find>ScrollPanel</find>
+      <find>tokenContentTextAreaScrollPanel</find>
+      <find>wordAnalysisResultShowing</find>
+      <find>drawtree</find>
+      <find>Panel</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -115,14 +167,15 @@
         <option value="$PROJECT_DIR$/src/Parsing/Parsing.java" />
         <option value="$PROJECT_DIR$/src/Parsing/transToken.java" />
         <option value="$PROJECT_DIR$/src/NewPanel.java" />
-        <option value="$PROJECT_DIR$/src/TreePanel.java" />
         <option value="$PROJECT_DIR$/src/Parsing/Production.java" />
         <option value="$PROJECT_DIR$/src/Parsing/SNLproduct.java" />
-        <option value="$PROJECT_DIR$/src/Parsing/Parse.java" />
         <option value="$PROJECT_DIR$/src/Word/WordAnalysis.java" />
-        <option value="$PROJECT_DIR$/src/UI/Win.java" />
         <option value="$PROJECT_DIR$/src/UI/WelcomePage.java" />
+        <option value="$PROJECT_DIR$/src/TreePanel.java" />
+        <option value="$PROJECT_DIR$/src/UI/TreePanel.java" />
+        <option value="$PROJECT_DIR$/src/Parsing/Parse.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/UI/Win.java" />
       </list>
     </option>
   </component>
@@ -146,7 +199,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -171,11 +223,18 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="CourseDesign" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseDesign" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Word" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,6 +248,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -252,7 +312,13 @@
       <workItem from="1588947846264" duration="943000" />
       <workItem from="1589328769031" duration="693000" />
       <workItem from="1589356721481" duration="5528000" />
-      <workItem from="1589408315738" duration="510000" />
+      <workItem from="1589408315738" duration="12419000" />
+      <workItem from="1589440191213" duration="4479000" />
+      <workItem from="1589495137269" duration="15911000" />
+      <workItem from="1589547889758" duration="616000" />
+      <workItem from="1589588090559" duration="7473000" />
+      <workItem from="1589597720047" duration="3270000" />
+      <workItem from="1589712019109" duration="2894000" />
     </task>
     <task id="LOCAL-00001" summary="加入.gitignore文件">
       <created>1588422519172</created>
@@ -345,11 +411,25 @@
       <option name="project" value="LOCAL" />
       <updated>1589408609783</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="更改读文件的路径, 绝对路径-&gt;项目内相对路径.&#10;添加code.txt文件, 用于存储SNL代码.">
+      <created>1589408832412</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589408832412</updated>
+    </task>
+    <task id="LOCAL-00015" summary="完成用户输入以及词法分析界面的搭建">
+      <created>1589460674088</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1589460674088</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89413000" />
+    <option name="totallyTimeSpent" value="135965000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -364,7 +444,7 @@
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16487935" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1769437" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -372,9 +452,9 @@
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.5053619" weight="0.0878187" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.5053619" visible="true" weight="0.24362606" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49924356" weight="0.3295082" />
@@ -382,8 +462,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49924356" weight="0.2885246" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402147" side_tool="true" visible="true" weight="0.26487252" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49597856" visible="true" weight="0.26487252" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50402147" side_tool="true" weight="0.26487252" />
+      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.49597856" weight="0.12747875" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -459,7 +539,8 @@
     <MESSAGE value="添加UI文件夹, 基本实现&quot;用户输入代码&quot;界面的功能" />
     <MESSAGE value="更改UI文件夹的位置" />
     <MESSAGE value="更改读文件的路径, 绝对路径-&gt;项目内相对路径.&#10;添加code.txt文件, 用于存储SNL代码." />
-    <option name="LAST_COMMIT_MESSAGE" value="更改读文件的路径, 绝对路径-&gt;项目内相对路径.&#10;添加code.txt文件, 用于存储SNL代码." />
+    <MESSAGE value="完成用户输入以及词法分析界面的搭建" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成用户输入以及词法分析界面的搭建" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test.txt" />
@@ -476,23 +557,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3">
           <caret line="30" column="81" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="81" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/WordAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="161" column="77" selection-start-line="161" selection-start-column="77" selection-end-line="161" selection-end-column="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/WordToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="1" selection-start-line="13" selection-start-column="1" selection-end-line="13" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -514,16 +578,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="67" selection-start-line="8" selection-start-column="6" selection-end-line="11" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Parsing/Parse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3078">
-          <caret line="162" column="40" lean-forward="true" selection-start-line="162" selection-start-column="40" selection-end-line="162" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -603,20 +657,75 @@
     <entry file="file://$PROJECT_DIR$/src/UI/ResultShowing.java" />
     <entry file="file://$PROJECT_DIR$/src/UI/UserInput.java" />
     <entry file="file://$PROJECT_DIR$/src/UI/WelcomePage.java" />
-    <entry file="file://$PROJECT_DIR$/src/TreePanel.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="38">
+          <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/WordToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/状态图.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/TreePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
+    <entry file="file://$PROJECT_DIR$/src/UI/WordAnalysisResult.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_111/src.zip!/javax/swing/JScrollPane.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        <state relative-caret-position="331">
+          <caret line="295" column="8" selection-start-line="295" selection-start-column="8" selection-end-line="295" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/WordAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" selection-start-line="2" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3045#4182#1" />
+            <element signature="e#4331#4560#1" />
+            <element signature="e#4622#4833#1" />
+            <element signature="e#5018#5527#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TreePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="5" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Parsing/Parse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="170" column="99" selection-start-line="170" selection-start-column="99" selection-end-line="170" selection-end-column="99" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -625,18 +734,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="114" column="17" selection-start-line="114" selection-start-column="17" selection-end-line="114" selection-end-column="17" />
+        <state relative-caret-position="294">
+          <caret line="97" column="21" selection-start-line="97" selection-start-column="21" selection-end-line="97" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getTreeInf#0;class#Main#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
+        <state relative-caret-position="323">
+          <caret line="311" column="59" selection-start-line="311" selection-start-column="59" selection-end-line="311" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5286#5287#0" expanded="true" />
+            <element signature="e#5358#5359#0" expanded="true" />
+            <element signature="e#7746#7747#0" expanded="true" />
+            <element signature="e#7817#7818#0" expanded="true" />
+            <element signature="method#showFileOpenDialog#0;class#Win#0" />
+            <element signature="method#writeFiletoTextFied#0;class#Win#0" />
+            <element signature="method#copyFile#0;class#Win#0" />
+            <element signature="method#showFileSaveDialog#0;class#Win#0" />
+            <element signature="method#writeTextAreatoFile#0;class#Win#0" />
+            <element signature="method#showThreeStringtoTextArea#0;class#Win#0" />
+            <element signature="method#showOneStringtoTextArea#0;class#Win#0" />
+            <element signature="method#wordAnalysisProcessShowing#0;class#Win#0" />
+            <element signature="e#41843#42214#0" />
+            <element signature="method#IsOther#0;class#Win#0" />
+            <element signature="method#IsKeyWord#0;class#Win#0" />
+            <element signature="method#getTreeInf#0;class#Win#0" />
+            <element signature="method#wordAnalysisResultShowing#0;class#Win#0" />
+            <element signature="method#parsingResultWritingFile#0;class#Win#0" />
+            <element signature="method#clearFile#0;class#Win#0" />
+          </folding>
         </state>
       </provider>
     </entry>

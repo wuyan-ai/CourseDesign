@@ -1,10 +1,12 @@
 package Parsing;
 
 import Word.WordToken;
+import UI.Win;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
+
+
 
 import static Parsing.Enum.lexType.*;
 import static Word.WordAnalysis.tokenList;
@@ -80,6 +82,8 @@ public class Parse {
     /*****************/
     public static treeNode match( Enum.nonTerminals NonTerminal , treeNode father ) {
 
+        UI.Win win=new UI.Win();
+
         int  i , j , choose = -1 ;
         treeNode root = new treeNode() ;
         Enum.nonTerminals temp ;
@@ -126,11 +130,14 @@ public class Parse {
                     System.out.print("匹配 ：");
                     if(cur-1>=0)
                         nowline=TokenList.get( cur-1 ).line;
-                    if(nowline==TokenList.get( cur ).line||cur==0)
-                        System.out.print(TokenList.get( cur ).wordMean+"  ");
+                    if(nowline==TokenList.get( cur ).line||cur==0) {
+                        System.out.print(TokenList.get(cur).wordMean + "  ");
+                        win.parsingResultWritingFile("匹配 ："+TokenList.get(cur).wordMean + "  ");
+                    }
                     else{
                       //  System.out.println();
                         System.out.print(TokenList.get( cur ).wordMean+"  ");
+                        win.parsingResultWritingFile("匹配 ："+TokenList.get( cur ).wordMean+"  ");
                     }
 
 
@@ -161,6 +168,7 @@ public class Parse {
                     }
 
                     System.out.print(Product.product[choose].getHead()+" ->"+t);
+                    win.parsingResultWritingFile("规约 ："+Product.product[choose].getHead()+" ->"+t);
                   //  }
 
                     child = match( NonTerminals , root ) ;   //非终极符递归

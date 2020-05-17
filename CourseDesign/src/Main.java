@@ -71,12 +71,8 @@ public class Main extends JFrame {
         }
 
     public static void main(String[] args) {
-
-        //黑黑添加的,用于新建窗口
         UI.Win win=new UI.Win();
-        win.Creating();
-        //黑黑添加的,用于新建窗口
-
+        win.clearFile("src\\UI\\ParsingResult.txt");
         WordAnalysis wordAnalysis=new WordAnalysis();
         String filename= "./code.txt";//黑黑的更改, 使用相对路径增强软件适应性, 也方便和界面的联系, 同时也添加了code.txt文件, 运行结果良好
         if(wordAnalysis.Scanner(filename)) {
@@ -96,9 +92,14 @@ public class Main extends JFrame {
             if(root!=null)
             {
                try{
-                   Main.drawtree( root ) ;
-                   System.out.println();
-                   System.out.println("成功");
+
+                   win.drawtree(root);
+
+                   //Main.drawtree( root ) ;
+
+                   System.out.println("\n成功");
+                   win.parsingResultWritingFile("成功");
+                   win.Creating();
                }catch (Exception e){
                    System.out.println("语法存在ERROR");
                }
