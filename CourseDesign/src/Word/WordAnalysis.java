@@ -169,19 +169,24 @@ public class WordAnalysis {
                         tokenList.add(wordToken);
                         break;
                     case 11://'.'
-                        if((chNum = fr.read())!=-1 && ((char)chNum=='.'))
+                        if((chNum = fr.read())!=-1 )
                         {
-                            wordToken = new WordToken(line,"..","分界符，无语义信息");
-                            tokenList.add(wordToken);
-                        }
-                        else if((chNum = fr.read())==-1)
-                        {
-                            wordToken = new WordToken(line,".","结束符，无语义信息");
-                            tokenList.add(wordToken);
+                            if((char)chNum=='.'){
+                                wordToken = new WordToken(line,"..","分界符，无语义信息");
+                                tokenList.add(wordToken);
+                            }
+                           else
+                            {
+                                success=0;
+                                wordToken = new WordToken(line,".","错误符号");
+                                tokenList.add(wordToken);
+                                fr.unread(chNum);
+                            }
                         }
                         else
                         {
-                            wordToken = new WordToken(line,".","结束符，无语义信息");
+                            success=0;
+                            wordToken = new WordToken(line,".","错误符号");
                             tokenList.add(wordToken);
                             fr.unread(chNum);
                         }

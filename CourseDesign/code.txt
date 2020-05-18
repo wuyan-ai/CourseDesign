@@ -36,4 +36,4 @@ while i<(num+1) do
 write(a[i]);
 i:=i+1
 endwh
-end.
+end.end
