@@ -55,7 +55,7 @@ public class WordAnalysis {
                                                                 else  if (ch == ' ' || ch == '\n' || ch == '\r' || ch == '\t') flag=17;
                                                                    else if(ch=='\'')  flag=18;
                                                                     else if(ch=='{') flag=19;
-                                                                     else  flag=19;
+                                                                     else  flag=20;
                 }
                 else
                 {
