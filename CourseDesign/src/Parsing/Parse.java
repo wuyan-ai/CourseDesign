@@ -3,8 +3,12 @@ package Parsing;
 import Word.WordToken;
 import UI.Win;
 
+import java.io.FileWriter;
 import java.util.*;
 import java.util.List;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 
 
@@ -80,7 +84,9 @@ public class Parse {
     /*****************/
     /*递归地匹配一个非终极符*/
     /*****************/
-    public static treeNode match( Enum.nonTerminals NonTerminal , treeNode father ) {
+    public static treeNode match( Enum.nonTerminals NonTerminal , treeNode father )throws IOException
+    {
+        FileWriter fw = new FileWriter("src\\UI\\ParsingResult.txt",true);
 
         int  i , j , choose = -1 ;
         treeNode root = new treeNode() ;
@@ -92,7 +98,8 @@ public class Parse {
         root.setNonTerminal( NonTerminal ) ;
         root.setFather( father ) ;
 
-        for( i = 1 ; i <= 104 ; i ++ ) {
+        for( i = 1 ; i <= 104 ; i ++ )
+        {
             int flag = 0 ;
             temp = Product.product[i].getHead() ;               //104条规则的左部
             for( j = 0 ; j < Predict.predict[i].getPredictNum() ; j ++ ) {
@@ -112,72 +119,85 @@ public class Parse {
             parsingErr.add(tempMsg);
             return null ;
         }
-        else {
-            for( i = 0 ; i < Product.product[choose].getproductNum() ; i ++ ) {
-                if( Product.product[choose].getflag( i ) == 0 ) {  //终极符
-                    treeNode leaf = new treeNode() ;
-                    leaf.setFather( father ) ;
-                    leaf.setflag( 0 ) ;
-                    leaf.setTerminal( Product.product[choose].getProductTerminal( i ) ) ;
-                    leaf.setData( TokenList.get( cur ).wordMean) ;
+        else
+        {
+            for (i = 0; i < Product.product[choose].getproductNum(); i++)
+            {
+                if (Product.product[choose].getflag(i) == 0)
+                {  //终极符
+                    treeNode leaf = new treeNode();
+                    leaf.setFather(father);
+                    leaf.setflag(0);
+                    leaf.setTerminal(Product.product[choose].getProductTerminal(i));
+                    leaf.setData(TokenList.get(cur).wordMean);
 
                    /*
                    打印 叶子节点的wordmean
                    */
                     System.out.println();
                     System.out.print("匹配 ：");
-                    if(cur-1>=0)
-                        nowline=TokenList.get( cur-1 ).line;
-                    if(nowline==TokenList.get( cur ).line||cur==0)
-                        System.out.print(TokenList.get( cur ).wordMean+"  ");
-                    else{
+                    if (cur - 1 >= 0)
+                        nowline = TokenList.get(cur - 1).line;
+                    if (nowline == TokenList.get(cur).line || cur == 0)
+                    {
+                        System.out.print(TokenList.get(cur).wordMean + "  ");
+                        fw.write("匹配 ："+TokenList.get(cur).wordMean + "  \n");//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+                    }
+                    else
+                    {
                         //  System.out.println();
-                        System.out.print(TokenList.get( cur ).wordMean+"  ");
+                        System.out.print(TokenList.get(cur).wordMean + "  ");
+                        fw.write("匹配 ："+TokenList.get(cur).wordMean + "  \n");//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     }
 
 
-                    root.setChild( leaf ) ;
-                    cur ++ ;
+                    root.setChild(leaf);
+                    cur++;
                 }
-                else {
-                    treeNode child ;
-                    Enum.nonTerminals NonTerminals = Product.product[choose].getProductNonterminal(i) ;
+                else
+                {
+                    treeNode child;
+                    Enum.nonTerminals NonTerminals = Product.product[choose].getProductNonterminal(i);
 
                       /*
                    打印 非叶子节点的wordmean
                    */
                     System.out.println();
                     System.out.print("规约 ：");
-//                    if(cur-1>=0)
-//                        nowline=TokenList.get( cur-1 ).line;
-//                    if(nowline==TokenList.get( cur ).line||cur==0)
-//                        System.out.print(Product.product[choose].getHead()+" ->"+NonTerminals);
-//                    else{
-                    String t="";
-                    for(j = 0 ; j < Product.product[choose].getproductNum() ; j ++ )
-                    {
-                        if(Product.product[choose].getflag(j)==0)
-                            t=""+Product.product[choose].getProductTerminal(j).toString()+" ";
+                    //                    if(cur-1>=0)
+                    //                        nowline=TokenList.get( cur-1 ).line;
+                    //                    if(nowline==TokenList.get( cur ).line||cur==0)
+                    //                        System.out.print(Product.product[choose].getHead()+" ->"+NonTerminals);
+                    //                    else{
+                    String t = "";
+                    for (j = 0; j < Product.product[choose].getproductNum(); j++) {
+                        if (Product.product[choose].getflag(j) == 0)
+                            t = "" + Product.product[choose].getProductTerminal(j).toString() + " ";
                         else
-                            t=t+Product.product[choose].getProductNonterminal(j).toString()+" ";
+                            t = t + Product.product[choose].getProductNonterminal(j).toString() + " ";
                     }
 
-                    System.out.print(Product.product[choose].getHead()+" ->"+t);
+                    System.out.print(Product.product[choose].getHead() + " ->" + t);
+                    fw.write("规约 ："+Product.product[choose].getHead() + " ->" + t+ "\n");//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
                     //  }
 
-                    child = match( NonTerminals , root ) ;   //非终极符递归
-                    root.setChild( child ) ;
+                    child = match(NonTerminals, root);   //非终极符递归
+                    root.setChild(child);
                 }
             }
         }
+        fw.close();
         return root ;
+
     }
 
 
     /*********************/
     /*得到一个语法分析树，返回树根*/
     /*********************/
-    public static treeNode getTree(){
+    public static treeNode getTree()throws IOException
+    {
         if(TokenList==null||TokenList.size()==0) {
             return null ;
         }
