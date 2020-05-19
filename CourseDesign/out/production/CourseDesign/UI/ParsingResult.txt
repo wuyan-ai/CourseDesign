@@ -699,9 +699,7 @@
 规约 ：StmList ->Stm StmMore 
 匹配 ：BEGIN  
 规约 ：ProgramBody ->END 
-匹配 ：END  
+匹配 ：ENDFILE  
 规约 ：Program ->ProgramHead DeclarePart ProgramBody 
 规约 ：Program ->ProgramHead DeclarePart ProgramBody 
 规约 ：Program ->ProgramHead DeclarePart ProgramBody 
-
-成功

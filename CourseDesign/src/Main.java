@@ -116,14 +116,18 @@ public class Main extends JFrame {
                 else {
                     System.out.println("\n语法存在ERROR");
                     win.ParsingWrongCreating();
-                    for(WordToken wordToken:parser.parsingErr)
-                        System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
+                    for(WordToken wordToken:parser.parsingErr) {
+                        System.out.println(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+                        win.parsingErrorWirting(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+                    }
                 }
             }catch (Exception e){
                 System.out.println("\n语法存在ERROR");
                 win.ParsingWrongCreating();
-                for(WordToken wordToken:parser.parsingErr)
-                    System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
+                for(WordToken wordToken:parser.parsingErr) {
+                    System.out.println(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+                    win.parsingErrorWirting(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+                }
             }
         }
         else{

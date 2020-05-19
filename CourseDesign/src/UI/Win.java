@@ -25,6 +25,8 @@ public class Win
 
 {
     public static int analysisStartFlag;
+    public static JTextArea parsingErrorTreeTextArea = new JTextArea();
+    public static JTextArea parsingErrorTreeTextArea2 = new JTextArea();
 
     static int  X ;
     static int  Space = 30 ;
@@ -1414,8 +1416,8 @@ public class Win
         parsingPanel.add(parsingTreeLabel);
         //4.3.2 parsingTreePanel
         //从别的模块里面调出来的
-        JTextArea parsingErrorTreeTextArea = new JTextArea();
-        parsingErrorTreeTextArea.setText("语法分析出现错误, 请认真检查您的代码;\n并在更改保存后再次尝试.");
+        //JTextArea parsingErrorTreeTextArea = new JTextArea();
+        parsingErrorTreeTextArea.setText("语法分析出现错误;\n请结合以下错误信息, 认真检查您的代码;\n并在更改保存后再次尝试.");
         parsingErrorTreeTextArea.setFont(textAreaFont);
         //treepanel = new TreePanel() ;
         //treepanel.setPreferredSize( new Dimension( Width , High ) ) ;
@@ -1498,8 +1500,8 @@ public class Win
         resultShowingPanel.add(parsingTreeResultLabel);
         //4.3.2 parsingTreePanel
         //从别的模块里面调出来的
-        JTextArea parsingErrorTreeTextArea2 = new JTextArea();
-        parsingErrorTreeTextArea2.setText("语法分析出现错误, 请认真检查您的代码;\n并在更改保存后再次尝试.");
+        //JTextArea parsingErrorTreeTextArea2 = new JTextArea();
+        parsingErrorTreeTextArea2.setText("语法分析出现错误;\n请结合以下错误信息, 认真检查您的代码;\n并在更改保存后再次尝试.");
         parsingErrorTreeTextArea2.setFont(textAreaFont);
         //Panel = new TreePanel() ;
         //Panel.setPreferredSize( new Dimension( Width , High ) ) ;
@@ -2219,6 +2221,11 @@ public class Win
 
 
     //------------------------- 以下为 词法分析 界面用到的函数 ------------------------------------------------------
+    public static void parsingErrorWirting(String str)
+    {
+        parsingErrorTreeTextArea.append("\n\n"+str);
+        parsingErrorTreeTextArea2.append("\n\n"+str);
+    }
 
 
     //------------------------- 以下为 语法分析 界面用到的函数 ------------------------------------------------------
