@@ -73,7 +73,7 @@ public class Main extends JFrame {
         UI.Win win=new UI.Win();
         while(true)
         {
-            win.clearFile("src\\UI\\ParsingResult.txt");
+            win.clearFile("./src/UI/ParsingResult.txt");
             win.CleanCreating();
 
             while(win.analysisStartFlag == 1)

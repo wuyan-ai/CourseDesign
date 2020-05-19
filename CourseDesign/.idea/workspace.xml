@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="45b301dc-1733-489b-a54c-554d399fcc04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/ParsingResult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ParsingResult.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/Win.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Win.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -48,8 +52,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-76">
-              <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+            <state relative-caret-position="247">
+              <caret line="75" column="36" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="36" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#199#2278#0" />
@@ -58,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Word/WordAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
+            <state relative-caret-position="323">
+              <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3045#4182#1" />
@@ -74,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2">
-              <caret line="2420" column="35" lean-forward="true" selection-start-line="2420" selection-start-column="35" selection-end-line="2420" selection-end-column="35" />
+            <state relative-caret-position="45">
+              <caret line="569" column="5" lean-forward="true" selection-start-line="569" selection-start-column="5" selection-end-line="569" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#CleanCreating#0;class#Win#0" />
@@ -129,6 +133,7 @@
                 <element signature="e#66995#66996#0" expanded="true" />
                 <element signature="e#71679#71680#0" expanded="true" />
                 <element signature="e#71731#71732#0" expanded="true" />
+                <element signature="method#WordAnalysisWrongCreating#0;class#Win#0" />
                 <element signature="e#76853#76854#0" expanded="true" />
                 <element signature="e#76925#76926#0" expanded="true" />
                 <element signature="e#79735#79736#0" expanded="true" />
@@ -221,10 +226,10 @@
         <option value="$PROJECT_DIR$/src/UI/WelcomePage.java" />
         <option value="$PROJECT_DIR$/src/TreePanel.java" />
         <option value="$PROJECT_DIR$/src/UI/TreePanel.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Parsing/Parse.java" />
         <option value="$PROJECT_DIR$/src/Word/WordAnalysis.java" />
         <option value="$PROJECT_DIR$/src/Word/WordToken.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/UI/Win.java" />
       </list>
     </option>
@@ -365,7 +370,7 @@
       <workItem from="1589712019109" duration="3328000" />
       <workItem from="1589721443222" duration="1166000" />
       <workItem from="1589802564157" duration="2716000" />
-      <workItem from="1589904425239" duration="6777000" />
+      <workItem from="1589904425239" duration="8409000" />
     </task>
     <task id="LOCAL-00001" summary="加入.gitignore文件">
       <created>1588422519172</created>
@@ -528,11 +533,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589908923493</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="解决了token序列无法清空的问题">
+      <created>1589911451216</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1589911451216</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="147458000" />
+    <option name="totallyTimeSpent" value="149090000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -650,7 +662,8 @@
     <MESSAGE value="实现了重置程序, 一次运行, 多次分析.&#10;但是有一个问题: 运行期间, 词法分析的token序列没有自动清空, 每次输出的token序列是本次以及前面多次的合并." />
     <MESSAGE value="刚才不小心改错了一点...恢复一下..也就是说刚才那次提交是有问题的, 以这次提交为准" />
     <MESSAGE value="按照严小严说的,改成20" />
-    <option name="LAST_COMMIT_MESSAGE" value="按照严小严说的,改成20" />
+    <MESSAGE value="解决了token序列无法清空的问题" />
+    <option name="LAST_COMMIT_MESSAGE" value="解决了token序列无法清空的问题" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test.txt" />
@@ -770,6 +783,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/WordToken.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parsing/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
@@ -782,10 +802,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Word/WordAnalysis.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3045#4182#1" />
+            <element signature="e#4331#4560#1" />
+            <element signature="e#4622#4833#1" />
+            <element signature="e#5018#5527#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-76">
-          <caret line="76" column="32" lean-forward="true" selection-start-line="76" selection-start-column="32" selection-end-line="76" selection-end-column="32" />
+        <state relative-caret-position="247">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="27" selection-end-line="75" selection-end-column="36" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#199#2278#0" />
@@ -793,17 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/WordToken.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="33" lean-forward="true" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="2420" column="35" lean-forward="true" selection-start-line="2420" selection-start-column="35" selection-end-line="2420" selection-end-column="35" />
+        <state relative-caret-position="45">
+          <caret line="569" column="5" lean-forward="true" selection-start-line="569" selection-start-column="5" selection-end-line="569" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#CleanCreating#0;class#Win#0" />
@@ -854,6 +881,7 @@
             <element signature="e#66995#66996#0" expanded="true" />
             <element signature="e#71679#71680#0" expanded="true" />
             <element signature="e#71731#71732#0" expanded="true" />
+            <element signature="method#WordAnalysisWrongCreating#0;class#Win#0" />
             <element signature="e#76853#76854#0" expanded="true" />
             <element signature="e#76925#76926#0" expanded="true" />
             <element signature="e#79735#79736#0" expanded="true" />
@@ -877,20 +905,6 @@
             <element signature="method#getTreeInf#0;class#Win#0" />
             <element signature="method#drawtree#0;class#Win#0" />
             <element signature="method#parsingResultWritingFile#0;class#Win#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Word/WordAnalysis.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="11" column="85" lean-forward="true" selection-start-line="11" selection-start-column="85" selection-end-line="11" selection-end-column="85" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3045#4182#1" />
-            <element signature="e#4331#4560#1" />
-            <element signature="e#4622#4833#1" />
-            <element signature="e#5018#5527#1" />
           </folding>
         </state>
       </provider>

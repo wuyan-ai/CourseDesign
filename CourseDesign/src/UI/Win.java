@@ -45,7 +45,7 @@ public class Win
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
-        ImageIcon icon=new ImageIcon("分析.png");  //设置窗口图标
+        ImageIcon icon=new ImageIcon("./src/UI/分析.png");  //设置窗口图标
         jf.setIconImage(icon.getImage());           //设置窗口图标
         jf.setTitle("小组 2117-30-03 出品");        // 设置窗口名称
         jf.setSize(1500, 805);      // 设置窗口大小
@@ -257,7 +257,7 @@ public class Win
         wordAnalysisPanel.add(stateDiagramLabel);
 
         //3.2.2 状态图底图
-        ImageIcon statePic=new ImageIcon("src\\UI\\状态图.png");
+        ImageIcon statePic=new ImageIcon("./src/UI/状态图.png");
         JLabel stateDiagramPicLabel = new JLabel();
         stateDiagramPicLabel.setIcon(statePic);
         stateDiagramPicLabel.setLocation(413,90);
@@ -576,7 +576,7 @@ public class Win
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
-        ImageIcon icon=new ImageIcon("分析.png");  //设置窗口图标
+        ImageIcon icon=new ImageIcon("./src/UI/分析.png");  //设置窗口图标
         jf.setIconImage(icon.getImage());           //设置窗口图标
         jf.setTitle("小组 2117-30-03 出品");        // 设置窗口名称
         jf.setSize(1500, 805);      // 设置窗口大小
@@ -790,7 +790,7 @@ public class Win
         wordAnalysisPanel.add(stateDiagramLabel);
 
         //3.2.2 状态图底图
-        ImageIcon statePic=new ImageIcon("src\\UI\\状态图.png");
+        ImageIcon statePic=new ImageIcon("./src/UI/状态图.png");
         JLabel stateDiagramPicLabel = new JLabel();
         stateDiagramPicLabel.setIcon(statePic);
         stateDiagramPicLabel.setLocation(413,90);
@@ -953,7 +953,7 @@ public class Win
         analysisProcessTextArea.setEditable(false);
         analysisProcessTextArea.setFont(textAreaFont);
         analysisProcessTextArea.setLineWrap(false);
-        writeFiletoTextFied("src\\UI\\ParsingResult.txt",analysisProcessTextArea);
+        writeFiletoTextFied("./src/UI/ParsingResult.txt",analysisProcessTextArea);
 
         JScrollPane analysisProcessTextAreaScrollPanel = new JScrollPane(
                 analysisProcessTextArea,
@@ -1046,7 +1046,7 @@ public class Win
         parsingResultTextArea.setFont(textAreaFont);
         parsingResultTextArea.setEditable(false);
         parsingResultTextArea.setLineWrap(false);
-        writeFiletoTextFied("src\\UI\\ParsingResult.txt",parsingResultTextArea);
+        writeFiletoTextFied("./src/UI/ParsingResult.txt",parsingResultTextArea);
 
         JScrollPane parsingResultTextAreaScrollPanel = new JScrollPane(
                 parsingResultTextArea,
@@ -1110,7 +1110,7 @@ public class Win
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
-        ImageIcon icon=new ImageIcon("分析.png");  //设置窗口图标
+        ImageIcon icon=new ImageIcon("./src/UI/分析.png");  //设置窗口图标
         jf.setIconImage(icon.getImage());           //设置窗口图标
         jf.setTitle("小组 2117-30-03 出品");        // 设置窗口名称
         jf.setSize(1500, 805);      // 设置窗口大小
@@ -1323,7 +1323,7 @@ public class Win
         wordAnalysisPanel.add(stateDiagramLabel);
 
         //3.2.2 状态图底图
-        ImageIcon statePic=new ImageIcon("src\\UI\\状态图.png");
+        ImageIcon statePic=new ImageIcon("./src/UI/状态图.png");
         JLabel stateDiagramPicLabel = new JLabel();
         stateDiagramPicLabel.setIcon(statePic);
         stateDiagramPicLabel.setLocation(413,90);
@@ -1485,7 +1485,7 @@ public class Win
         analysisProcessTextArea.setEditable(false);
         analysisProcessTextArea.setFont(textAreaFont);
         analysisProcessTextArea.setLineWrap(false);
-        writeFiletoTextFied("src\\UI\\ParsingResult.txt",analysisProcessTextArea);
+        writeFiletoTextFied("./src/UI/ParsingResult.txt",analysisProcessTextArea);
 
         JScrollPane analysisProcessTextAreaScrollPanel = new JScrollPane(
                 analysisProcessTextArea,
@@ -1581,7 +1581,7 @@ public class Win
         parsingResultTextArea.setFont(textAreaFont);
         parsingResultTextArea.setEditable(false);
         parsingResultTextArea.setLineWrap(false);
-        writeFiletoTextFied("src\\UI\\ParsingResult.txt",parsingResultTextArea);
+        writeFiletoTextFied("./src/UI/ParsingResult.txt",parsingResultTextArea);
 
         JScrollPane parsingResultTextAreaScrollPanel = new JScrollPane(
                 parsingResultTextArea,
@@ -1648,7 +1648,7 @@ public class Win
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
-        ImageIcon icon=new ImageIcon("分析.png");  //设置窗口图标
+        ImageIcon icon=new ImageIcon("./src/UI/分析.png");  //设置窗口图标
         jf.setIconImage(icon.getImage());           //设置窗口图标
         jf.setTitle("小组 2117-30-03 出品");        // 设置窗口名称
         jf.setSize(1500, 805);      // 设置窗口大小
@@ -1862,7 +1862,7 @@ public class Win
         wordAnalysisPanel.add(stateDiagramLabel);
 
         //3.2.2 状态图底图
-        ImageIcon statePic=new ImageIcon("src\\UI\\状态图.png");
+        ImageIcon statePic=new ImageIcon("./src/UI/状态图.png");
         JLabel stateDiagramPicLabel = new JLabel();
         stateDiagramPicLabel.setIcon(statePic);
         stateDiagramPicLabel.setLocation(413,90);
@@ -2187,7 +2187,6 @@ public class Win
 
 
     }
-
     //------------------------- 以下为 用户输入 界面用到的函数 ------------------------------------------------------
     // 打开文件, 并将文件展示到文本框内
     private static void showFileOpenDialog(Component parent, JTextArea msgTextArea) {
