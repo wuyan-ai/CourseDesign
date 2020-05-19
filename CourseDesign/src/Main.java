@@ -72,6 +72,20 @@ public class Main extends JFrame {
     public static void main(String[] args) {
         UI.Win win=new UI.Win();
         win.clearFile("src\\UI\\ParsingResult.txt");
+        win.CleanCreating();
+
+        while(win.analysisStartFlag == 1)
+        {
+            if(win.analysisStartFlag == 2)
+                break;
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
         WordAnalysis wordAnalysis=new WordAnalysis();
         String filename= "./code.txt";
         if(wordAnalysis.Scanner(filename)) {
@@ -115,8 +129,9 @@ public class Main extends JFrame {
         else{
             System.out.println("\n词法分析过程中发现ERROR");
             if(wordAnalysis.tokenList!=null)
-                for(WordToken wordToken:wordAnalysis.tokenList)
-                    System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
+                win.WordAnalysisWrongCreating();
+            for(WordToken wordToken:wordAnalysis.tokenList)
+                System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
         }
     }
 }
