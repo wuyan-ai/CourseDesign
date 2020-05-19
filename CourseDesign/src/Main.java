@@ -8,6 +8,7 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Main extends JFrame {
+    /*
         static int  X ;
         static int  Space = 30 ;
         static int  Width , High ;
@@ -66,13 +67,13 @@ public class Main extends JFrame {
             frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE ) ;
             frame.setSize( 1000 , 800 ) ;
             frame.setVisible( true ) ;
-        }
+        }*/
 
     public static void main(String[] args) {
         UI.Win win=new UI.Win();
         win.clearFile("src\\UI\\ParsingResult.txt");
         WordAnalysis wordAnalysis=new WordAnalysis();
-        String filename= "./code.txt";//黑黑的更改, 使用相对路径增强软件适应性, 也方便和界面的联系, 同时也添加了code.txt文件, 运行结果良好
+        String filename= "./code.txt";
         if(wordAnalysis.Scanner(filename)) {
             if(wordAnalysis.tokenList!=null)
                 for(WordToken wordToken:wordAnalysis.tokenList)
@@ -84,7 +85,7 @@ public class Main extends JFrame {
             try{
                 root = parser.getTree() ;
             }catch (Exception e){
-                System.out.println("语法存在ERROR");
+                System.out.println("\n语法存在ERROR");
             }
 
             if(root!=null)
@@ -96,21 +97,22 @@ public class Main extends JFrame {
                    //Main.drawtree( root ) ;
 
                    System.out.println("\n成功");
-                   win.parsingResultWritingFile("成功");
+                   win.parsingResultWritingFile("\n成功");
                    win.Creating();
                }catch (Exception e){
-                   System.out.println("语法存在ERROR");
+                   System.out.println("\n语法存在ERROR");
                }
             }
             else {
-                System.out.println("语法存在ERROR");
+                System.out.println("\n语法存在ERROR");
+                win.ParsingWrongCreating();
                 for(WordToken wordToken:parser.parsingErr)
                     System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
             }
 
         }
         else{
-            System.out.println("词法分析过程中发现ERROR");
+            System.out.println("\n词法分析过程中发现ERROR");
             if(wordAnalysis.tokenList!=null)
                 for(WordToken wordToken:wordAnalysis.tokenList)
                     System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
