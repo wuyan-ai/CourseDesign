@@ -175,7 +175,7 @@ public class WordAnalysis {
                                 wordToken = new WordToken(line,"..","分界符，无语义信息");
                                 tokenList.add(wordToken);
                             }
-                           else
+                            else
                             {
                                 success=0;
                                 wordToken = new WordToken(line,".","错误符号");
@@ -188,7 +188,7 @@ public class WordAnalysis {
                             success=0;
                             wordToken = new WordToken(line,".","错误符号");
                             tokenList.add(wordToken);
-                            fr.unread(chNum);
+                            // fr.unread(chNum);
                         }
                         break;
                     case 12: //'='

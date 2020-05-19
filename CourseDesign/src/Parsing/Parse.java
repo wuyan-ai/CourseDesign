@@ -82,8 +82,6 @@ public class Parse {
     /*****************/
     public static treeNode match( Enum.nonTerminals NonTerminal , treeNode father ) {
 
-        UI.Win win=new UI.Win();
-
         int  i , j , choose = -1 ;
         treeNode root = new treeNode() ;
         Enum.nonTerminals temp ;
@@ -130,14 +128,11 @@ public class Parse {
                     System.out.print("匹配 ：");
                     if(cur-1>=0)
                         nowline=TokenList.get( cur-1 ).line;
-                    if(nowline==TokenList.get( cur ).line||cur==0) {
-                        System.out.print(TokenList.get(cur).wordMean + "  ");
-                        win.parsingResultWritingFile("匹配 ："+TokenList.get(cur).wordMean + "  ");
-                    }
-                    else{
-                      //  System.out.println();
+                    if(nowline==TokenList.get( cur ).line||cur==0)
                         System.out.print(TokenList.get( cur ).wordMean+"  ");
-                        win.parsingResultWritingFile("匹配 ："+TokenList.get( cur ).wordMean+"  ");
+                    else{
+                        //  System.out.println();
+                        System.out.print(TokenList.get( cur ).wordMean+"  ");
                     }
 
 
@@ -168,8 +163,7 @@ public class Parse {
                     }
 
                     System.out.print(Product.product[choose].getHead()+" ->"+t);
-                    win.parsingResultWritingFile("规约 ："+Product.product[choose].getHead()+" ->"+t);
-                  //  }
+                    //  }
 
                     child = match( NonTerminals , root ) ;   //非终极符递归
                     root.setChild( child ) ;
@@ -191,15 +185,22 @@ public class Parse {
             treeNode root = new treeNode() ;
             cur = 0 ;
             root = match( Enum.nonTerminals.Program , root ) ;
-            if((cur+1)>=TokenList.size()){
-                WordToken tempMsg=new WordToken(TokenList.get(cur).line,"ERROR：无结束标志 .","语法错误");
+            if(root==null)
+                return null;
+            if((cur)>=TokenList.size()){
+                WordToken tempMsg=new WordToken(TokenList.get(cur).line,"ERROR：输入流不为空，分析栈为空","语法错误");
                 parsingErr.add(tempMsg);
                 return null;
             }
 
-            if( TokenList.get(cur+1).type != Enum.lexType.ENDFILE ){
+            if( TokenList.get(cur).type != Enum.lexType.ENDFILE ){
                 //System.out.println(TokenList.get(cur+1).type);
-                WordToken tempMsg=new WordToken(TokenList.get(cur).line,"ERROR：无结束标志","语法错误");
+                WordToken tempMsg=new WordToken(TokenList.get(cur).line,"ERROR：无结束标识","语法错误");
+                parsingErr.add(tempMsg);
+            }
+            if(cur>0 &&TokenList.get(cur-1).type != Enum.lexType.END){
+                //System.out.println(TokenList.get(cur+1).type);
+                WordToken tempMsg=new WordToken(TokenList.get(cur).line,"ERROR：缺少END","语法错误");
                 parsingErr.add(tempMsg);
             }
             if( parsingErr!=null && parsingErr.size()!=0 ) {
