@@ -89,7 +89,8 @@ public class Main extends JFrame {
             }
 
             WordAnalysis wordAnalysis=new WordAnalysis();
-            String filename= "./code.txt";
+            wordAnalysis.tokenList.clear();
+;            String filename= "./code.txt";
             if(wordAnalysis.Scanner(filename)) {
                 if(wordAnalysis.tokenList!=null)
                     for(WordToken wordToken:wordAnalysis.tokenList)

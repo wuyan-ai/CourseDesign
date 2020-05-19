@@ -3,6 +3,7 @@ import Parsing.treeNode;
 import Word.WordAnalysis;
 import Word.WordToken;
 
+
 import javax.swing.*;
 import java.awt.*;
 import java.io.File;
@@ -1922,6 +1923,7 @@ public class Win
         JTextArea tokenFormContentTextArea = new JTextArea();
         tokenFormContentTextArea.setFont(textAreaFont);
         tokenFormContentTextArea.setLineWrap(false);
+        tokenFormContentTextArea.append(("词法分析发现错误;\n请根据以下内容中的错误提示信息仔细检查;\n"));
         wordAnalysisResultShowing(tokenFormContentTextArea);
 
         JScrollPane tokenFormContentTextAreaScrollPanel = new JScrollPane(
@@ -1983,6 +1985,7 @@ public class Win
         tokenContentTextArea.setEditable(false);
         tokenContentTextArea.setFont(textAreaFont);
         tokenContentTextArea.setLineWrap(false);
+        tokenContentTextArea.append(("词法分析发现错误;\n请根据以下内容中的错误提示信息仔细检查;\n"));
         wordAnalysisResultShowing(tokenContentTextArea);
 
         JScrollPane tokenContentTextAreaScrollPanel = new JScrollPane(
@@ -2097,6 +2100,7 @@ public class Win
         wordAnalysisResultContentTextArea.setFont(textAreaFont);
         wordAnalysisResultContentTextArea.setEditable(false);
         wordAnalysisResultContentTextArea.setLineWrap(false);
+        wordAnalysisResultContentTextArea.append(("词法分析发现错误;\n请根据以下内容中的错误提示信息仔细检查;\n"));
         wordAnalysisResultShowing(wordAnalysisResultContentTextArea);
 
         JScrollPane wordAnalysisResultContentTextAreaScrollPanel = new JScrollPane(
@@ -2432,8 +2436,7 @@ public class Win
     //词法分析结果展示(快速打印Token序列)
     public static void wordAnalysisResultShowing(JTextArea textArea)
     {
-        WordAnalysis wordAnalysis=new WordAnalysis();
-        if(wordAnalysis.Scanner("./code.txt"))//词法分析没有出错, 直接输出Token序列
+        WordAnalysis wordAnalysis = new WordAnalysis();
             for(WordToken wordToken:wordAnalysis.tokenList)
             {
                 if(wordToken.line<=9)
@@ -2445,23 +2448,9 @@ public class Win
                     textArea.append(" "+wordToken.line+" | "+wordToken.type+" \t   | "+wordToken.wordMean+"\n");
                 }
             }
-        else//词法分析出错, 输出一条提示语句, 以及Token序列
-        {
-            textArea.append(("词法分析发现错误;\n请根据以下内容中的错误提示信息仔细检查;\n"));
-            for(WordToken wordToken:wordAnalysis.tokenList)
-            {
-                if(wordToken.line<=9)
-                {
-                    textArea.append(" "+wordToken.line+" | "+wordToken.type+" \t   | "+wordToken.wordMean+"\n");
-                }
-                else
-                {
-                    textArea.append(" "+wordToken.line+" | "+wordToken.type+" \t   | "+wordToken.wordMean+"\n");
-                }
-            }
-        }
 
     }
+//textArea.append(("词法分析发现错误;\n请根据以下内容中的错误提示信息仔细检查;\n"));
 
     //将语法分析结果一条条的写入文件 src\UI\ParsingResult.txt
     public static void parsingResultWritingFile(String str)
