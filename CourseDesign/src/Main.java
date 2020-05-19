@@ -71,49 +71,59 @@ public class Main extends JFrame {
 
     public static void main(String[] args) {
         UI.Win win=new UI.Win();
-        win.clearFile("src\\UI\\ParsingResult.txt");
-        win.CleanCreating();
-
-        while(win.analysisStartFlag == 1)
+        while(true)
         {
-            if(win.analysisStartFlag == 2)
-                break;
+            win.clearFile("src\\UI\\ParsingResult.txt");
+            win.CleanCreating();
 
-            try {
-                Thread.sleep(1000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
+            while(win.analysisStartFlag == 1)
+            {
+                if(win.analysisStartFlag == 2)
+                    break;
 
-        WordAnalysis wordAnalysis=new WordAnalysis();
-        String filename= "./code.txt";
-        if(wordAnalysis.Scanner(filename)) {
-            if(wordAnalysis.tokenList!=null)
-                for(WordToken wordToken:wordAnalysis.tokenList)
-                    System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
-            treeNode root = new treeNode() ;
-
-            Parse parser = new Parse() ;
-
-            try{
-                root = parser.getTree() ;
-                if(root!=null)
-                {
-                    try{
-
-                        win.drawtree(root);
-
-                        //Main.drawtree( root ) ;
-
-                        System.out.println("\n成功");
-                        win.parsingResultWritingFile("\n成功");
-                        win.Creating();
-                    }catch (Exception e){
-                        System.out.println("\n语法存在ERROR");
-                    }
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
-                else {
+            }
+
+            WordAnalysis wordAnalysis=new WordAnalysis();
+            String filename= "./code.txt";
+            if(wordAnalysis.Scanner(filename)) {
+                if(wordAnalysis.tokenList!=null)
+                    for(WordToken wordToken:wordAnalysis.tokenList)
+                        System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
+                treeNode root = new treeNode() ;
+
+                Parse parser = new Parse() ;
+
+                try{
+                    root = parser.getTree() ;
+                    if(root!=null)
+                    {
+                        try{
+
+                            win.drawtree(root);
+
+                            //Main.drawtree( root ) ;
+
+                            System.out.println("\n成功");
+                            win.parsingResultWritingFile("\n成功");
+                            win.Creating();
+                        }catch (Exception e){
+                            System.out.println("\n语法存在ERROR");
+                        }
+                    }
+                    else {
+                        System.out.println("\n语法存在ERROR");
+                        win.ParsingWrongCreating();
+                        for(WordToken wordToken:parser.parsingErr) {
+                            System.out.println(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+                            win.parsingErrorWirting(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+                        }
+                    }
+                }catch (Exception e){
                     System.out.println("\n语法存在ERROR");
                     win.ParsingWrongCreating();
                     for(WordToken wordToken:parser.parsingErr) {
@@ -121,22 +131,27 @@ public class Main extends JFrame {
                         win.parsingErrorWirting(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
                     }
                 }
-            }catch (Exception e){
-                System.out.println("\n语法存在ERROR");
-                win.ParsingWrongCreating();
-                for(WordToken wordToken:parser.parsingErr) {
-                    System.out.println(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
-                    win.parsingErrorWirting(wordToken.line + "  " + wordToken.type + "  " + wordToken.wordMean);
+            }
+            else{
+                System.out.println("\n词法分析过程中发现ERROR");
+                if(wordAnalysis.tokenList!=null)
+                    win.WordAnalysisWrongCreating();
+                for(WordToken wordToken:wordAnalysis.tokenList)
+                    System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
+            }
+
+            while(win.programResetFlag == 1)
+            {
+                if (win.programResetFlag == 2)
+                    break;
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
                 }
             }
         }
-        else{
-            System.out.println("\n词法分析过程中发现ERROR");
-            if(wordAnalysis.tokenList!=null)
-                win.WordAnalysisWrongCreating();
-            for(WordToken wordToken:wordAnalysis.tokenList)
-                System.out.println(wordToken.line+"  "+wordToken.type+"  "+wordToken.wordMean);
-        }
+
     }
 }
 

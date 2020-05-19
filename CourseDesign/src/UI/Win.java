@@ -25,6 +25,7 @@ public class Win
 
 {
     public static int analysisStartFlag;
+    public static int programResetFlag;
     public static JTextArea parsingErrorTreeTextArea = new JTextArea();
     public static JTextArea parsingErrorTreeTextArea2 = new JTextArea();
 
@@ -38,7 +39,8 @@ public class Win
 
     public static void CleanCreating()
     {
-        analysisStartFlag=1;
+        analysisStartFlag = 1;
+        programResetFlag = 1;
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
@@ -326,6 +328,18 @@ public class Win
 
         wordAnalysisPanel.add(tokenFormContentTextAreaScrollPanel);
 
+        JButton wordAnalysisResetBtn = new JButton();
+        wordAnalysisResetBtn.setText("重置程序");
+        wordAnalysisResetBtn.setLocation(1346,20);
+        wordAnalysisResetBtn.setSize(120,50);
+        wordAnalysisResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        wordAnalysisPanel.add(wordAnalysisResetBtn);
+
         /*analysisStartBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -435,6 +449,18 @@ public class Win
         pane.setSize(506,640);
         parsingPanel.add( pane ) ;
 
+        JButton parsingResetBtn = new JButton();
+        parsingResetBtn.setText("重置程序");
+        parsingResetBtn.setLocation(1346,20);
+        parsingResetBtn.setSize(120,50);
+        parsingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        parsingPanel.add(parsingResetBtn);
+
         //--------⑤ 搭建 结果展示 界面----------------------------------------------------------------------------------------------------
         //5.1 左侧 词法分析结果 区域
         //5.1.1 wordAnalysisResultLabel
@@ -516,6 +542,18 @@ public class Win
         pane2.setSize(506,640);
         resultShowingPanel.add( pane2 ) ;
 
+        JButton resultShowingResetBtn = new JButton();
+        resultShowingResetBtn.setText("重置程序");
+        resultShowingResetBtn.setLocation(1346,20);
+        resultShowingResetBtn.setSize(120,50);
+        resultShowingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        resultShowingPanel.add(resultShowingResetBtn);
+
 
         // 三 把 面板容器 作为窗口的内容面板 设置到 窗口
         jf.setContentPane(userInputPanel);
@@ -532,7 +570,8 @@ public class Win
 
     public static void Creating()
     {
-        analysisStartFlag=1;
+        analysisStartFlag = 1;
+        programResetFlag = 1;
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
@@ -822,6 +861,19 @@ public class Win
 
         wordAnalysisPanel.add(tokenFormContentTextAreaScrollPanel);
 
+        JButton wordAnalysisResetBtn = new JButton();
+        wordAnalysisResetBtn.setText("重置程序");
+        wordAnalysisResetBtn.setLocation(1346,20);
+        wordAnalysisResetBtn.setSize(120,50);
+        wordAnalysisResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        wordAnalysisPanel.add(wordAnalysisResetBtn);
+
+
         /*analysisStartBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -931,6 +983,18 @@ public class Win
         pane.setSize(506,640);
         parsingPanel.add( pane ) ;
 
+        JButton parsingResetBtn = new JButton();
+        parsingResetBtn.setText("重置程序");
+        parsingResetBtn.setLocation(1346,20);
+        parsingResetBtn.setSize(120,50);
+        parsingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        parsingPanel.add(parsingResetBtn);
+
         //--------⑤ 搭建 结果展示 界面----------------------------------------------------------------------------------------------------
         //5.1 左侧 词法分析结果 区域
         //5.1.1 wordAnalysisResultLabel
@@ -1012,6 +1076,18 @@ public class Win
         pane2.setSize(506,640);
         resultShowingPanel.add( pane2 ) ;
 
+        JButton resultShowingResetBtn = new JButton();
+        resultShowingResetBtn.setText("重置程序");
+        resultShowingResetBtn.setLocation(1346,20);
+        resultShowingResetBtn.setSize(120,50);
+        resultShowingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        resultShowingPanel.add(resultShowingResetBtn);
+
 
         // 三 把 面板容器 作为窗口的内容面板 设置到 窗口
         //jf.setContentPane(userInputPanel);
@@ -1029,6 +1105,7 @@ public class Win
     public static void ParsingWrongCreating()
     {
         analysisStartFlag = 1;
+        programResetFlag = 1;
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
@@ -1317,6 +1394,18 @@ public class Win
 
         wordAnalysisPanel.add(tokenFormContentTextAreaScrollPanel);
 
+        JButton wordAnalysisResetBtn = new JButton();
+        wordAnalysisResetBtn.setText("重置程序");
+        wordAnalysisResetBtn.setLocation(1346,20);
+        wordAnalysisResetBtn.setSize(120,50);
+        wordAnalysisResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        wordAnalysisPanel.add(wordAnalysisResetBtn);
+
         /*analysisStartBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1429,6 +1518,18 @@ public class Win
         pane.setSize(506,640);
         parsingPanel.add( pane ) ;
 
+        JButton parsingResetBtn = new JButton();
+        parsingResetBtn.setText("重置程序");
+        parsingResetBtn.setLocation(1346,20);
+        parsingResetBtn.setSize(120,50);
+        parsingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        parsingPanel.add(parsingResetBtn);
+
         //--------⑤ 搭建 结果展示 界面----------------------------------------------------------------------------------------------------
         //5.1 左侧 词法分析结果 区域
         //5.1.1 wordAnalysisResultLabel
@@ -1513,6 +1614,18 @@ public class Win
         pane2.setSize(506,640);
         resultShowingPanel.add( pane2 ) ;
 
+        JButton resultShowingResetBtn = new JButton();
+        resultShowingResetBtn.setText("重置程序");
+        resultShowingResetBtn.setLocation(1346,20);
+        resultShowingResetBtn.setSize(120,50);
+        resultShowingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        resultShowingPanel.add(resultShowingResetBtn);
+
 
         // 三 把 面板容器 作为窗口的内容面板 设置到 窗口
         //jf.setContentPane(userInputPanel);
@@ -1529,7 +1642,8 @@ public class Win
 
     public static void WordAnalysisWrongCreating()
     {
-        analysisStartFlag=1;
+        analysisStartFlag = 1;
+        programResetFlag = 1;
 
         // 一 创建一个顶层容器（窗口）
         //JFrame jf = new JFrame();          // 创建窗口
@@ -1819,6 +1933,18 @@ public class Win
 
         wordAnalysisPanel.add(tokenFormContentTextAreaScrollPanel);
 
+        JButton wordAnalysisResetBtn = new JButton();
+        wordAnalysisResetBtn.setText("重置程序");
+        wordAnalysisResetBtn.setLocation(1346,20);
+        wordAnalysisResetBtn.setSize(120,50);
+        wordAnalysisResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        wordAnalysisPanel.add(wordAnalysisResetBtn);
+
         /*analysisStartBtn.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1933,6 +2059,18 @@ public class Win
         pane.setSize(506,640);
         parsingPanel.add( pane ) ;
 
+        JButton parsingResetBtn = new JButton();
+        parsingResetBtn.setText("重置程序");
+        parsingResetBtn.setLocation(1346,20);
+        parsingResetBtn.setSize(120,50);
+        parsingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        parsingPanel.add(parsingResetBtn);
+
         //--------⑤ 搭建 结果展示 界面----------------------------------------------------------------------------------------------------
         //5.1 左侧 词法分析结果 区域
         //5.1.1 wordAnalysisResultLabel
@@ -2018,6 +2156,19 @@ public class Win
         pane2.setLocation(966,90);
         pane2.setSize(506,640);
         resultShowingPanel.add( pane2 ) ;
+
+
+        JButton resultShowingResetBtn = new JButton();
+        resultShowingResetBtn.setText("重置程序");
+        resultShowingResetBtn.setLocation(1346,20);
+        resultShowingResetBtn.setSize(120,50);
+        resultShowingResetBtn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                programResetFlag = 2;
+            }
+        });
+        resultShowingPanel.add(resultShowingResetBtn);
 
 
         // 三 把 面板容器 作为窗口的内容面板 设置到 窗口

@@ -4,7 +4,6 @@
     <list default="true" id="45b301dc-1733-489b-a54c-554d399fcc04" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code.txt" beforeDir="false" afterPath="$PROJECT_DIR$/code.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseDesign/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/CourseDesign/UI/ParsingResult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CourseDesign/UI/ParsingResult.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/ParsingResult.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ParsingResult.txt" afterDir="false" />
@@ -39,7 +38,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Parsing/Parse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
+            <state relative-caret-position="1301">
               <caret line="222" column="94" selection-start-line="222" selection-start-column="94" selection-end-line="222" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -50,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="112" column="58" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
+            <state relative-caret-position="339">
+              <caret line="148" column="50" lean-forward="true" selection-start-line="148" selection-start-column="50" selection-end-line="148" selection-end-column="50" />
               <folding>
                 <element signature="e#199#2278#0" />
               </folding>
@@ -62,52 +61,76 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="2224" column="5" lean-forward="true" selection-start-line="2224" selection-start-column="5" selection-end-line="2224" selection-end-column="5" />
+            <state relative-caret-position="248">
+              <caret line="337" column="37" lean-forward="true" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#CleanCreating#0;class#Win#0" />
-                <element signature="e#5409#5410#0" expanded="true" />
-                <element signature="e#5481#5482#0" expanded="true" />
-                <element signature="e#8289#8290#0" expanded="true" />
-                <element signature="e#8360#8361#0" expanded="true" />
+                <element signature="e#5626#5627#0" expanded="true" />
+                <element signature="e#5698#5699#0" expanded="true" />
+                <element signature="e#8506#8507#0" expanded="true" />
+                <element signature="e#8577#8578#0" expanded="true" />
                 <element signature="e#9810#10080#0" />
                 <element signature="e#11132#11617#0" />
                 <element signature="e#11654#12694#0" />
+                <element signature="e#14454#14455#0" expanded="true" />
+                <element signature="e#14506#14507#0" expanded="true" />
                 <element signature="e#13901#14330#0" />
                 <element signature="e#16051#16563#0" />
+                <element signature="e#19534#19535#0" expanded="true" />
+                <element signature="e#19586#19587#0" expanded="true" />
+                <element signature="e#24040#24041#0" expanded="true" />
+                <element signature="e#24092#24093#0" expanded="true" />
                 <element signature="method#Creating#0;class#Win#0" />
-                <element signature="e#27584#27585#0" expanded="true" />
-                <element signature="e#27656#27657#0" expanded="true" />
-                <element signature="e#30466#30467#0" expanded="true" />
-                <element signature="e#30537#30538#0" expanded="true" />
+                <element signature="e#29196#29197#0" expanded="true" />
+                <element signature="e#29268#29269#0" expanded="true" />
+                <element signature="e#32078#32079#0" expanded="true" />
+                <element signature="e#32149#32150#0" expanded="true" />
                 <element signature="e#31985#32255#0" />
                 <element signature="e#33307#33792#0" />
                 <element signature="e#33829#34869#0" />
+                <element signature="e#38023#38024#0" expanded="true" />
+                <element signature="e#38075#38076#0" expanded="true" />
                 <element signature="e#36075#36504#0" />
                 <element signature="e#38224#38736#0" />
-                <element signature="e#49757#49758#0" expanded="true" />
-                <element signature="e#49829#49830#0" expanded="true" />
-                <element signature="e#52690#52691#0" expanded="true" />
-                <element signature="e#52761#52762#0" expanded="true" />
+                <element signature="e#43097#43098#0" expanded="true" />
+                <element signature="e#43149#43150#0" expanded="true" />
+                <element signature="e#47595#47596#0" expanded="true" />
+                <element signature="e#47647#47648#0" expanded="true" />
+                <element signature="method#ParsingWrongCreating#0;class#Win#0" />
+                <element signature="e#52764#52765#0" expanded="true" />
+                <element signature="e#52836#52837#0" expanded="true" />
+                <element signature="e#55697#55698#0" expanded="true" />
+                <element signature="e#55768#55769#0" expanded="true" />
                 <element signature="e#54209#54479#0" />
                 <element signature="e#55531#56016#0" />
                 <element signature="e#56053#57093#0" />
+                <element signature="e#61641#61642#0" expanded="true" />
+                <element signature="e#61693#61694#0" expanded="true" />
                 <element signature="e#58298#58727#0" />
                 <element signature="e#60446#60958#0" />
+                <element signature="e#66943#66944#0" expanded="true" />
+                <element signature="e#66995#66996#0" expanded="true" />
+                <element signature="e#71679#71680#0" expanded="true" />
+                <element signature="e#71731#71732#0" expanded="true" />
                 <element signature="method#WordAnalysisWrongCreating#0;class#Win#0" />
-                <element signature="e#72424#72425#0" expanded="true" />
-                <element signature="e#72496#72497#0" expanded="true" />
-                <element signature="e#75306#75307#0" expanded="true" />
-                <element signature="e#75377#75378#0" expanded="true" />
+                <element signature="e#76853#76854#0" expanded="true" />
+                <element signature="e#76925#76926#0" expanded="true" />
+                <element signature="e#79735#79736#0" expanded="true" />
+                <element signature="e#79806#79807#0" expanded="true" />
                 <element signature="e#76825#77095#0" />
                 <element signature="e#78147#78632#0" />
                 <element signature="e#78669#79709#0" />
+                <element signature="e#85679#85680#0" expanded="true" />
+                <element signature="e#85731#85732#0" expanded="true" />
                 <element signature="e#80914#81343#0" />
                 <element signature="e#83062#83574#0" />
+                <element signature="e#91068#91069#0" expanded="true" />
+                <element signature="e#91120#91121#0" expanded="true" />
+                <element signature="e#95876#95877#0" expanded="true" />
+                <element signature="e#95928#95929#0" expanded="true" />
                 <element signature="method#showFileOpenDialog#0;class#Win#0" />
                 <element signature="method#writeFiletoTextFied#0;class#Win#0" />
                 <element signature="method#copyFile#0;class#Win#0" />
@@ -179,8 +202,8 @@
         <option value="$PROJECT_DIR$/src/UI/TreePanel.java" />
         <option value="$PROJECT_DIR$/src/Word/WordAnalysis.java" />
         <option value="$PROJECT_DIR$/src/Parsing/Parse.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/UI/Win.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -314,7 +337,7 @@
       <workItem from="1589712019109" duration="3328000" />
       <workItem from="1589721443222" duration="1166000" />
       <workItem from="1589802564157" duration="2716000" />
-      <workItem from="1589904425239" duration="955000" />
+      <workItem from="1589904425239" duration="2641000" />
     </task>
     <task id="LOCAL-00001" summary="加入.gitignore文件">
       <created>1588422519172</created>
@@ -449,11 +472,18 @@
       <option name="project" value="LOCAL" />
       <updated>1589904637858</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="修改了parsing内的代码,实现&quot;输出到控制台的同时也输出到文件src/UI/ParsingResult.txt&quot;;&#10;修改了 main 函数, 实现了&quot;输出错误信息到图形界面(语法树区域)&quot;&#10;可以通过删除最后一行的end测试">
+      <created>1589905502253</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1589905502253</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141636000" />
+    <option name="totallyTimeSpent" value="143322000" />
   </component>
   <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
@@ -477,7 +507,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.50268096" visible="true" weight="0.10906515" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.50268096" visible="true" weight="0.26062322" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -486,7 +516,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4969743" weight="0.2885246" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
-      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49731904" side_tool="true" visible="true" weight="0.10906515" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.49731904" side_tool="true" visible="true" weight="0.26062322" />
       <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.4953083" weight="0.14305949" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -567,7 +597,8 @@
     <MESSAGE value="完善界面到可以展示的水平, 现存按钮工作正常, 暂时去掉动态展示分析过程的功能" />
     <MESSAGE value="版本回退" />
     <MESSAGE value="实现先输入SNL代码再分析;&#10;实现词法分析错误展示;" />
-    <option name="LAST_COMMIT_MESSAGE" value="实现先输入SNL代码再分析;&#10;实现词法分析错误展示;" />
+    <MESSAGE value="修改了parsing内的代码,实现&quot;输出到控制台的同时也输出到文件src/UI/ParsingResult.txt&quot;;&#10;修改了 main 函数, 实现了&quot;输出错误信息到图形界面(语法树区域)&quot;&#10;可以通过删除最后一行的end测试" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改了parsing内的代码,实现&quot;输出到控制台的同时也输出到文件src/UI/ParsingResult.txt&quot;;&#10;修改了 main 函数, 实现了&quot;输出错误信息到图形界面(语法树区域)&quot;&#10;可以通过删除最后一行的end测试" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test.txt" />
@@ -708,9 +739,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="337" column="37" lean-forward="true" selection-start-line="337" selection-start-column="37" selection-end-line="337" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5626#5627#0" expanded="true" />
+            <element signature="e#5698#5699#0" expanded="true" />
+            <element signature="e#8506#8507#0" expanded="true" />
+            <element signature="e#8577#8578#0" expanded="true" />
+            <element signature="e#9810#10080#0" />
+            <element signature="e#11132#11617#0" />
+            <element signature="e#11654#12694#0" />
+            <element signature="e#14454#14455#0" expanded="true" />
+            <element signature="e#14506#14507#0" expanded="true" />
+            <element signature="e#13901#14330#0" />
+            <element signature="e#16051#16563#0" />
+            <element signature="e#19534#19535#0" expanded="true" />
+            <element signature="e#19586#19587#0" expanded="true" />
+            <element signature="e#24040#24041#0" expanded="true" />
+            <element signature="e#24092#24093#0" expanded="true" />
+            <element signature="method#Creating#0;class#Win#0" />
+            <element signature="e#29196#29197#0" expanded="true" />
+            <element signature="e#29268#29269#0" expanded="true" />
+            <element signature="e#32078#32079#0" expanded="true" />
+            <element signature="e#32149#32150#0" expanded="true" />
+            <element signature="e#31985#32255#0" />
+            <element signature="e#33307#33792#0" />
+            <element signature="e#33829#34869#0" />
+            <element signature="e#38023#38024#0" expanded="true" />
+            <element signature="e#38075#38076#0" expanded="true" />
+            <element signature="e#36075#36504#0" />
+            <element signature="e#38224#38736#0" />
+            <element signature="e#43097#43098#0" expanded="true" />
+            <element signature="e#43149#43150#0" expanded="true" />
+            <element signature="e#47595#47596#0" expanded="true" />
+            <element signature="e#47647#47648#0" expanded="true" />
+            <element signature="method#ParsingWrongCreating#0;class#Win#0" />
+            <element signature="e#52764#52765#0" expanded="true" />
+            <element signature="e#52836#52837#0" expanded="true" />
+            <element signature="e#55697#55698#0" expanded="true" />
+            <element signature="e#55768#55769#0" expanded="true" />
+            <element signature="e#54209#54479#0" />
+            <element signature="e#55531#56016#0" />
+            <element signature="e#56053#57093#0" />
+            <element signature="e#61641#61642#0" expanded="true" />
+            <element signature="e#61693#61694#0" expanded="true" />
+            <element signature="e#58298#58727#0" />
+            <element signature="e#60446#60958#0" />
+            <element signature="e#66943#66944#0" expanded="true" />
+            <element signature="e#66995#66996#0" expanded="true" />
+            <element signature="e#71679#71680#0" expanded="true" />
+            <element signature="e#71731#71732#0" expanded="true" />
+            <element signature="method#WordAnalysisWrongCreating#0;class#Win#0" />
+            <element signature="e#76853#76854#0" expanded="true" />
+            <element signature="e#76925#76926#0" expanded="true" />
+            <element signature="e#79735#79736#0" expanded="true" />
+            <element signature="e#79806#79807#0" expanded="true" />
+            <element signature="e#76825#77095#0" />
+            <element signature="e#78147#78632#0" />
+            <element signature="e#78669#79709#0" />
+            <element signature="e#85679#85680#0" expanded="true" />
+            <element signature="e#85731#85732#0" expanded="true" />
+            <element signature="e#80914#81343#0" />
+            <element signature="e#83062#83574#0" />
+            <element signature="e#91068#91069#0" expanded="true" />
+            <element signature="e#91120#91121#0" expanded="true" />
+            <element signature="e#95876#95877#0" expanded="true" />
+            <element signature="e#95928#95929#0" expanded="true" />
+            <element signature="method#showFileOpenDialog#0;class#Win#0" />
+            <element signature="method#writeFiletoTextFied#0;class#Win#0" />
+            <element signature="method#copyFile#0;class#Win#0" />
+            <element signature="method#showFileSaveDialog#0;class#Win#0" />
+            <element signature="method#writeTextAreatoFile#0;class#Win#0" />
+            <element signature="method#getTreeInf#0;class#Win#0" />
+            <element signature="method#drawtree#0;class#Win#0" />
+            <element signature="method#wordAnalysisResultShowing#0;class#Win#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Parsing/Parse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
+        <state relative-caret-position="1301">
           <caret line="222" column="94" selection-start-line="222" selection-start-column="94" selection-end-line="222" selection-end-column="94" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -722,67 +834,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="112" column="58" selection-start-line="112" selection-start-column="58" selection-end-line="112" selection-end-column="58" />
+        <state relative-caret-position="339">
+          <caret line="148" column="50" lean-forward="true" selection-start-line="148" selection-start-column="50" selection-end-line="148" selection-end-column="50" />
           <folding>
             <element signature="e#199#2278#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/UI/Win.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="2224" column="5" lean-forward="true" selection-start-line="2224" selection-start-column="5" selection-end-line="2224" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#CleanCreating#0;class#Win#0" />
-            <element signature="e#5409#5410#0" expanded="true" />
-            <element signature="e#5481#5482#0" expanded="true" />
-            <element signature="e#8289#8290#0" expanded="true" />
-            <element signature="e#8360#8361#0" expanded="true" />
-            <element signature="e#9810#10080#0" />
-            <element signature="e#11132#11617#0" />
-            <element signature="e#11654#12694#0" />
-            <element signature="e#13901#14330#0" />
-            <element signature="e#16051#16563#0" />
-            <element signature="method#Creating#0;class#Win#0" />
-            <element signature="e#27584#27585#0" expanded="true" />
-            <element signature="e#27656#27657#0" expanded="true" />
-            <element signature="e#30466#30467#0" expanded="true" />
-            <element signature="e#30537#30538#0" expanded="true" />
-            <element signature="e#31985#32255#0" />
-            <element signature="e#33307#33792#0" />
-            <element signature="e#33829#34869#0" />
-            <element signature="e#36075#36504#0" />
-            <element signature="e#38224#38736#0" />
-            <element signature="e#49757#49758#0" expanded="true" />
-            <element signature="e#49829#49830#0" expanded="true" />
-            <element signature="e#52690#52691#0" expanded="true" />
-            <element signature="e#52761#52762#0" expanded="true" />
-            <element signature="e#54209#54479#0" />
-            <element signature="e#55531#56016#0" />
-            <element signature="e#56053#57093#0" />
-            <element signature="e#58298#58727#0" />
-            <element signature="e#60446#60958#0" />
-            <element signature="method#WordAnalysisWrongCreating#0;class#Win#0" />
-            <element signature="e#72424#72425#0" expanded="true" />
-            <element signature="e#72496#72497#0" expanded="true" />
-            <element signature="e#75306#75307#0" expanded="true" />
-            <element signature="e#75377#75378#0" expanded="true" />
-            <element signature="e#76825#77095#0" />
-            <element signature="e#78147#78632#0" />
-            <element signature="e#78669#79709#0" />
-            <element signature="e#80914#81343#0" />
-            <element signature="e#83062#83574#0" />
-            <element signature="method#showFileOpenDialog#0;class#Win#0" />
-            <element signature="method#writeFiletoTextFied#0;class#Win#0" />
-            <element signature="method#copyFile#0;class#Win#0" />
-            <element signature="method#showFileSaveDialog#0;class#Win#0" />
-            <element signature="method#writeTextAreatoFile#0;class#Win#0" />
-            <element signature="method#getTreeInf#0;class#Win#0" />
-            <element signature="method#drawtree#0;class#Win#0" />
-            <element signature="method#wordAnalysisResultShowing#0;class#Win#0" />
           </folding>
         </state>
       </provider>
